@@ -3,8 +3,19 @@ const bcrypt = require('bcrypt');
 module.exports = function(sequelize, DataTypes) {
   const User = sequelize.define("User", {
     // Giving the Author model a name of type STRING
-    localemail        : DataTypes.STRING,
-    localpassword     : DataTypes.STRING,
+    firstName         : DataTypes.STRING,
+    lastName          : DataTypes.STRING,
+    birthday          : DataTypes.DATEONLY,
+    sex               : DataTypes.STRING,
+    city              : DataTypes.STRING,
+    state             : DataTypes.STRING,
+    country           : DataTypes.STRING,
+    zipCode           : DataTypes.INTEGER,
+    email             : DataTypes.STRING,
+    phone             : DataTypes.STRING,
+    picturePath       : DataTypes.BLOB,
+    password          : DataTypes.STRING,
+    isActive          : DataTypes.BOOLEAN,
     facebookid        : DataTypes.STRING,
     facebooktoken     : DataTypes.STRING,
     facebookemail     : DataTypes.STRING,

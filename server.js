@@ -38,8 +38,8 @@ else{
   mongoose.connect('mongodb://localhost/reserved');
 }
 
-db.sequelize.sync({ force: true }).then(function() {
-	// require('./db/seed.js')(db);
+db.sequelize.sync().then(function() {
+	require('./scripts/seeds.js')(db);
 	app.listen(PORT, function() {
 	  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 	});
