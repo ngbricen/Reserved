@@ -6,6 +6,10 @@ module.exports = function(sequelize, DataTypes) {
     isActive             : DataTypes.BOOLEAN
   });
 
+  UserRole.associate = function(models) {
+    UserRole.hasOne(models.User, {});
+  };
+
   return UserRole;
 };
 

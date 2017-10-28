@@ -7,6 +7,10 @@ module.exports = function(sequelize, DataTypes) {
     isActive             : DataTypes.BOOLEAN
   });
 
+	ProductCategory.associate = function(models) {
+    ProductCategory.hasOne(models.Product, {});
+  };
+
   return ProductCategory;
 };
 

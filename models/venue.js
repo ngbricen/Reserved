@@ -17,10 +17,10 @@ module.exports = function(sequelize, DataTypes) {
     venueVerified     : DataTypes.STRING,
     venueVerifiedBy   : DataTypes.STRING,
     venueVerifiedDate : DataTypes.DATE,
-    SortOrder         : DataTypes.TINYINT,
+    SortOrder         : DataTypes.INTEGER,
     isActive          : DataTypes.BOOLEAN
   });
 
-  return Territory;
+  return Venue;
 };
 

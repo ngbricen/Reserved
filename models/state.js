@@ -5,12 +5,24 @@ module.exports = function(sequelize, DataTypes) {
     // Giving the Author model a name of type STRING
     stateCode       	: DataTypes.STRING,
     stateName					: DataTypes.STRING,
-    countryCode		  	: DataTypes.STRING,
-    territoryCode		 	: DataTypes.STRING,
     isOnlyState				: DataTypes.BOOLEAN,
-    SortOrder         : DataTypes.TINYINT,
+    SortOrder         : DataTypes.INTEGER,
     isActive          : DataTypes.BOOLEAN
   });
+
+  State.associate = function(models) {
+    State.belongsTo(models.Country, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+
+    State.belongsTo(models.Territory, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
 
   return State;
 };
