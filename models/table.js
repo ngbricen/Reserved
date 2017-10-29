@@ -1,5 +1,3 @@
-const bcrypt = require('bcrypt');
-
 module.exports = function(sequelize, DataTypes) {
   const Table = sequelize.define("Table", {
     tableName    			: DataTypes.STRING,
@@ -9,7 +7,7 @@ module.exports = function(sequelize, DataTypes) {
     tableXPosition		: DataTypes.DECIMAL,
     tableYPosition		: DataTypes.DECIMAL,
     tableIsVisilble		: DataTypes.BOOLEAN,
-    SortOrder         : DataTypes.INTEGER,
+    sortOrder         : DataTypes.INTEGER,
     isActive          : DataTypes.BOOLEAN
   });
 
@@ -19,6 +17,9 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false
       }
     });
+
+    Table.hasMany(models.SalesTable, {});
+
   };
 
   return Table;

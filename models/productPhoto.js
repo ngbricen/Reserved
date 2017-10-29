@@ -1,5 +1,3 @@
-const bcrypt = require('bcrypt');
-
 module.exports = function(sequelize, DataTypes) {
   const ProductPhoto = sequelize.define("ProductPhoto", {
     thumbnailPhoto		 		: DataTypes.BLOB,

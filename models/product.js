@@ -1,8 +1,7 @@
-const bcrypt = require('bcrypt');
-
 module.exports = function(sequelize, DataTypes) {
   const Product = sequelize.define("Product", {
     productName  				 : DataTypes.STRING,
+    quantityInStock      : DataTypes.INTEGER,
     isActive             : DataTypes.BOOLEAN
   });
 
@@ -18,6 +17,8 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: true
       }
     });
+
+    Product.hasMany(models.SalesOrderDetails, {});
   };
 
 
