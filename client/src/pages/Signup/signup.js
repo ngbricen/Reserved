@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-import { Col, Row, Container } from "../../components/Grid";
 import { Input, FormBtn } from "../../components/Form";
 import $ from "jquery"
 
@@ -60,38 +59,39 @@ class Signup extends Component {
   
   render() {
     return (
-      <div id="signIn">
-        <Container fluid>
-          <Row>
-            <Col size="md-10 md-offset-1">
+    <div id="modalSignUp" className="modal fade" role="dialog">
+      <div className="modal-dialog">
 
-                <form>
-                  <Input
-                    value={this.state.email}
-                    onChange={this.handleInputChange}
-                    name="email"
-                    placeholder="email"
-                  />
-                  <Input
-                    value={this.state.password}
-                    onChange={this.handleInputChange}
-                    name="password"
-                    placeholder="password"
-                    type="password"
-                  />
-                  <FormBtn
-                    disabled={!this.state.email}
-                    onClick={this.handleFormSubmit}
-                    id="signupSubmit"
-                  >
-                    Submit
-                  </FormBtn>
-                </form>
+        <div className="modal-content">
+          <div className="modal-header">
+            <button type="button" className="close" data-dismiss="modal">&times;</button>
+            <h4 className="modal-title" id="signInLabel">Sign Up</h4>
+          </div>
+          <div className="modal-body">
+            <form>
+                <Input
+                  value={this.state.email}
+                  onChange={this.handleInputChange}
+                  name="email"
+                  placeholder="email"
+                />
+                <Input
+                  value={this.state.password}
+                  onChange={this.handleInputChange}
+                  name="password"
+                  placeholder="password"
+                  type="password"
+                />
+              <Input value={this.state.confirm} onChange={this.handleInputChange} placeholder="Confirm Password" name="confirm" type="password" />
+            </form>
+          </div>
+          <div className="modal-footer">
+            <button type="button" className="btn btn-default" data-dismiss="modal">Submit</button>
+          </div>
+        </div>
 
-            </Col>
-          </Row>
-        </Container>
       </div>
+    </div>
     );
   }
 }

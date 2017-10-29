@@ -1,19 +1,13 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-import { Col, Row, Container } from "../../components/Grid";
 import { Input, FormBtn } from "../../components/Form";
 import $ from "jquery";
-
-// const submitStyle = {
-//   "background-color": "#6c99c9"
-// }
 
 class Login extends Component {
   state = {
     user: [],
     email: "",
-    password: "",
-    showModal: true
+    password: ""
   };
 
   handleInputChange = event => {
@@ -51,10 +45,15 @@ class Login extends Component {
 
   render() {
     return (
-      <div id="logIn">
-        <Container fluid>
-          <Row>
-            <Col size="md-10 md-offset-1">
+     <div id="modalSignIn" className="modal fade" role="dialog">
+      <div className="modal-dialog">
+
+        <div className="modal-content">
+          <div className="modal-header">
+            <button type="button" className="close" data-dismiss="modal">&times;</button>
+            <h4 className="modal-title">Log In</h4>
+          </div>
+          <div className="modal-body">
 
                 <form>
                   <Input
@@ -70,20 +69,16 @@ class Login extends Component {
                     placeholder="password"
                     type="password"
                   />
-                  <FormBtn
-                    disabled={!this.state.email || !this.state.password}
-                    onClick={this.handleFormSubmit}
-                    id="loginSubmit"
-                    style={this.submitStyle}
-                  >
-                    Submit
-                  </FormBtn>
                 </form>
-              
-            </Col>
-          </Row>
-        </Container>
+
+          </div>
+          <div className="modal-footer">
+            <button type="button" className="btn btn-default" data-dismiss="modal" onClick={this.handleFormSubmit}>Submit</button>
+          </div>
+        </div>
+
       </div>
+    </div>
     );
   }
 }
