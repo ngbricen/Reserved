@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import UserLogin from "./Userlogin";
+import Login from "../pages/Login";
+import Signup from "../pages/Signup"
 import $ from "jquery";
 import API from "../utils/API";
 
@@ -51,16 +52,16 @@ class Nav extends Component {
   render() {
 
     return (
-      <nav>
-        <div className="Name">Reserved</div>
-          <ul className="mainNavigation">
-            <a href="/"><li>Reserved</li></a>
-            <a href="/profile"><li>Profile</li></a>
-          </ul>
-        <div className="clear"></div>
-        <div className="logIn" id="logInBttn" data-toggle="modal" data-target="#loginModalBox" onClick={this.toggleHidden.bind(this)}><p>Log In</p></div>
-          {(!this.state.isLoginHidden && !this.state.isMessageLogout)  && <UserLogin />}
-      </nav>
+        <nav>
+          <div className="name">OPEN</div>
+          <div className="login">
+            <div className="signin" data-toggle="modal" data-target="#modalSignIn">Log In</div>
+            <div className="signup" data-toggle="modal" data-target="#modalSignUp">Sign Up</div>
+          </div>
+          <div className="clear"></div>
+          <Login />
+          <Signup />
+        </nav>
     )
   }
 }

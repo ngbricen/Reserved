@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const morgan = require('morgan');
-const mongoose = require("mongoose"); //mongoose used here, making mongodb below
+//const mongoose = require("mongoose"); //mongoose used here, making mongodb below
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -27,16 +27,16 @@ app.use(express['static'](__dirname+'client/public', {maxAge: 86400000}));
 // Add routes, both API and view
 app.use(routes);
 
-// Set up promises with mongoose
-mongoose.Promise = global.Promise;
+// // Set up promises with mongoose
+// mongoose.Promise = global.Promise;
 
-if(process.env.NODE_ENV == 'production'){
-  // Gotten using `heroku config | grep MONGODB_URI` command in Command Line
-  //mongoose.connect('mongodb://heroku_b1gmf87k:a513rrhtaikr597ug58qdeh1fq@ds163294.mlab.com:63294/heroku_b1gmf87k');
-}
-else{
-  mongoose.connect('mongodb://localhost/reserved');
-}
+// if(process.env.NODE_ENV == 'production'){
+//   // Gotten using `heroku config | grep MONGODB_URI` command in Command Line
+//   //mongoose.connect('mongodb://heroku_b1gmf87k:a513rrhtaikr597ug58qdeh1fq@ds163294.mlab.com:63294/heroku_b1gmf87k');
+// }
+// else{
+//   mongoose.connect('mongodb://localhost/reserved');
+// }
 
 db.sequelize.sync({ force: true }).then(function() {
 	require('./scripts/seeds.js')(db);

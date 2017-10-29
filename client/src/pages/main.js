@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import aboutMS from "./about-ms";
-import profile from "./profile"
+import mainPage from "./main-page";
 import Nav from "../components/nav";
 import Footer from "../components/footer"
 import NoMatch from "./NoMatch";
@@ -19,15 +18,12 @@ function requireAuth(nextState, replace) {
 
 const Main = () =>
 	<Router>
-    	<div>
-        <div className="mainContainer">
+    	<div className="background">
       		<Nav />
       		<Switch>
-          		<Route exact path="/" component={aboutMS} />
-              <Route path="/profile" component={profile} onEnter={requireAuth} />
+          		<Route exact path="/" component={mainPage} onEnter={requireAuth} />
           		<Route component={NoMatch} />
       		</Switch>
-        </div>
         <Footer /> 		
     	</div>       
 	</Router>;
