@@ -49,6 +49,8 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: true
       }
     });
+    User.hasMany(models.SalesUserCreditCard, {});
+    User.hasMany(models.SalesOrder, {});
   };
 
   return User;

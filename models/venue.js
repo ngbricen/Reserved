@@ -17,7 +17,7 @@ module.exports = function(sequelize, DataTypes) {
     venueVerified     : DataTypes.STRING,
     venueVerifiedBy   : DataTypes.STRING,
     venueVerifiedDate : DataTypes.DATE,
-    SortOrder         : DataTypes.INTEGER,
+    sortOrder         : DataTypes.INTEGER,
     isActive          : DataTypes.BOOLEAN
   });
 

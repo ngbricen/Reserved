@@ -1,16 +1,14 @@
-const bcrypt = require('bcrypt');
-
 module.exports = function(sequelize, DataTypes) {
   const Country = sequelize.define("Country", {
-    countryCode       : DataTypes.STRING,
+    countryCode       : {type: DataTypes.STRING, primaryKey: true},
     countryName       : DataTypes.STRING,
-    SortOrder         : DataTypes.INTEGER,
+    sortOrder         : DataTypes.INTEGER,
     isActive          : DataTypes.BOOLEAN
   });
 
   Country.associate = function(models) {
-    Country.hasOne(models.Territory, {});
-    Country.hasOne(models.State, {});
+    Country.hasOne(models.Territory, {foreignKey: 'countryCode'});
+    Country.hasOne(models.StateProvince, {foreignKey: 'countryCode'});
   };
 
   return Country;
