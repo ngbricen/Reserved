@@ -19,6 +19,7 @@ module.exports = function(sequelize, DataTypes) {
     });
 
     Product.hasMany(models.SalesOrderDetails, {});
+    Product.hasMany(models.UserPreference, {});
   };
 
 
