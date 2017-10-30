@@ -20,7 +20,11 @@ module.exports = function(sequelize, DataTypes) {
     sortOrder         : DataTypes.INTEGER,
     isActive          : DataTypes.BOOLEAN
   });
-
+  Venue.associate = function(models) {
+    Venue.hasMany(models.UserPreference, {});
+    Venue.hasOne(models.Table, {});
+  }
+  
   return Venue;
 };
 

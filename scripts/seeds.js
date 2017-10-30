@@ -17,4 +17,24 @@ module.exports = function(db) {
     UserRoleId: 1
   });
 
+  db.UserPreferenceType.create({
+    userPreferenceName: 'Venue',
+    isActive: true
+  });
+
+  db.UserPreferenceType.create({
+    userPreferenceName: 'Table',
+    isActive: true
+  });
+
+  db.UserPreferenceType.create({
+    userPreferenceName: 'Product',
+    isActive: true
+  });
+
+  db.UserPreferenceType.create({
+    userPreferenceName: 'Bundle',
+    isActive: true
+  });    
+
 };

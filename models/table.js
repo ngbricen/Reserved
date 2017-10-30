@@ -18,7 +18,14 @@ module.exports = function(sequelize, DataTypes) {
       }
     });
 
+    Table.belongsTo(models.Venue, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+
     Table.hasMany(models.SalesTable, {});
+    Table.hasMany(models.UserPreference, {});
 
   };
 
