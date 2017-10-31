@@ -15,6 +15,7 @@ router.route("/authenticate")
 router.route("/:token")
 	.get(authController.verifyToken);
 
+
 router.route("/dashboard")
   .get(passport.authenticate('jwt', { session: false }), function(req, res) {  
   res.send('It worked! User id is: ' + req.user + '.');

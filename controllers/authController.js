@@ -1,4 +1,4 @@
-const dbUser = require("../models/user");
+const db = require("../models");
 const jwt = require('jsonwebtoken');
 const config = require("../config/index");
 const passport = require('passport');
@@ -6,48 +6,64 @@ const passport = require('passport');
 // Defining methods for the usersController
 module.exports = {
   authenticate: function(req, res) {
-    dbUser.findOne({
-      email: req.body.email
-      }, 
-      function(err, user) {
-        if (err) return res.status(500).send('Error on the server.');
-        
+    db.User.findOne({
+      where: {
+        email: req.body.email
+      }
+    }).then(function(user) {
         if (!user) {
           console.log("user not found");
-          return res.send({ success: false, token: null, message: 'Authentication failed. User not found.' });
+          return res.send({ success: false, token: null, message :'Authentication failed. User not found.' });
         } 
         else {
           // Check if password matches
-          user.comparePassword(req.body.password, function(err, isMatch) {
-            if (isMatch && !err) {
-              // Create token if the password matched and no error was thrown
+
+          if(user.validPassword(req.body.password)){
+            console.log("inside validate");
+
+            // Create token if the password matched and no error was thrown
+            var token = jwt.sign({data: user}, config.secret, {
+              expiresIn: 10080 // in seconds
+            });
+            // window.localStorage.setItem('token', token);
+            return res.status(200).json({ success: true, token: 'JWT ' + token, message: 'Authentication sucessful'});
+          }
+          else {
+            return res.status(401).send({ success: false, token: null, message: 'Authentication failed. Passwords did not match.' });
+          }
+        } 
+      })
+      .catch(function(err) {
+        if (err) return res.status(500).send('Error on the server.');
+      })
+  },
+  register: function(req, res) {
+    db.User.findOne({
+      where: {
+        email: req.body.email
+      }
+    }).then(function(user) {
+      if (user){
+          return res.json({ success: false, message: req.flash('signupMessage','That email has already been taken')});
+      } 
+      else{
+        db.User.create(req.body)
+          .then(function(user) {
+            if (!user) {
+              return res.json({ success: false, message: req.flash('signupMessage','That email has already been taken')});
+            }
+            else{
               var token = jwt.sign({data: user}, config.secret, {
                 expiresIn: 10080 // in seconds
               });
-              // window.localStorage.setItem('token', token);
-              return res.status(200).json({ success: true, token: 'JWT ' + token, message: 'Authentication sucessful'});
-            } 
-            else {
-              return res.status(401).send({ success: false, token: null, message: 'Authentication failed. Passwords did not match.' });
+              return res.status(200).json({ success: true, token: 'JWT ' + token, message: 'Successfully created new user.'});
             }
+          })
+          .catch(function(error){
+              console.log(err);
           });
-        }
-      });    
-  },
-  register: function(req, res) {
-    dbUser
-      .create(req.body, function(err, user) {
-        if (err) {
-          return res.json({ success: false, message: 'That email address already exists.'});
-        }
-        else{
-          console.log(user);
-          var token = jwt.sign({data: user}, config.secret, {
-            expiresIn: 10080 // in seconds
-          });
-          return res.status(200).json({ success: true, token: 'JWT ' + token, message: 'Successfully created new user.'});
-        }
-      }); 
+      }
+    }); 
   },
   verifyToken: function(req, res, next) {
     var token = req.params.token || req.body.token || req.query.token || req.headers['x-access-token'];

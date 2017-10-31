@@ -30,15 +30,17 @@ class Login extends Component {
             alert("Authentication failed.  Try again or Sign Up");
           }, 1000);
         } else {
+          console.log(res.data.response);
+          console.log(res.data.token);
           this.setState({ user: res.data.response, email: "", password: ""});
           document.getElementById("loginSubmit").dataset.dismiss = "modal";
           $("#loginModal").hide();
-          document.getElementById("logInBttn").innerHTML = "<p>Log Out</p>";
+          // document.getElementById("logInBttn").innerHTML = "<p>Log Out</p>";
 
           //Store the token in a session
           window.localStorage.setItem('token', res.data.token);
         }
-    })
+      })
       .catch(err => console.log(err));
     }
   };
@@ -73,7 +75,7 @@ class Login extends Component {
 
           </div>
           <div className="modal-footer">
-            <button type="button" className="btn btn-default" data-dismiss="modal" onClick={this.handleFormSubmit}>Submit</button>
+            <button type="button" id="loginSubmit" className="btn btn-default" data-dismiss="modal" onClick={this.handleFormSubmit}>Submit</button>
           </div>
         </div>
 

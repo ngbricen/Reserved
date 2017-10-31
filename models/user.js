@@ -11,7 +11,7 @@ module.exports = function(sequelize, DataTypes) {
     state             : DataTypes.STRING,
     country           : DataTypes.STRING,
     zipCode           : DataTypes.INTEGER,
-    email             : DataTypes.STRING,
+    email             : {type: DataTypes.STRING, unique: true},
     phone             : DataTypes.STRING,
     picturePath       : DataTypes.BLOB,
     password          : DataTypes.STRING,
@@ -28,20 +28,19 @@ module.exports = function(sequelize, DataTypes) {
     windowslivetoken  : DataTypes.STRING(1024),
     windowsliveemail  : DataTypes.STRING,
     windowslivename   : DataTypes.STRING  
-  },  
+  }, 
     {
-      classMethods: {
-        generateHash : function(password) {
-          return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
-        },      
-      },
-        instanceMethods: {      
-        validPassword : function(password) {
-          return bcrypt.compareSync(password, this.localpassword);
+      hooks: {
+        beforeCreate: (user) => {
+          const salt = bcrypt.genSaltSync();
+          user.password = bcrypt.hashSync(user.password, salt);
         }
       }
     }
   );
+  User.prototype.validPassword = function(password) {
+    return bcrypt.compareSync(password,this.password)  
+  }
 
   User.associate = function(models) {
     User.belongsTo(models.UserRole, {
