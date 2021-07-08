@@ -1,0 +1,191 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+nav {
+	padding-bottom: 1%;
+	border-bottom: solid 1px #000;
+	color: #fff;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5b5b5b+0,000000+100 */
+background: rgb(91,91,91); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(91,91,91,.75) 0%, rgba(0,0,0,.75) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(91,91,91,.75) 0%,rgba(0,0,0,.75) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(91,91,91,.75) 0%,rgba(0,0,0,.75) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5b5b5b', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+.name {
+	font-family: 'Dosis', sans-serif;
+	font-weight: 500;
+	letter-spacing: -2px;
+	font-stretch: expanded;
+	font-size: 350%;
+  transform: scale(1, 1.5);
+  -webkit-transform: scale(1, 1.5); /* Safari and Chrome */
+  -moz-transform: scale(1, 1.5); /* Firefox */
+  -ms-transform: scale(1, 1.5); /* IE 9+ */
+  -o-transform: scale(1, 1.5); /* Opera */
+	margin-left: 1.8%;
+	padding-top: .6%;
+}
+.login {
+	float: right;
+	margin-top: -35px;
+	margin-right: 1.8%;
+	width: 175px;
+	padding-right: 0%;
+	font-family: 'Saira+Extra+Condensed', sans-serif;
+	font-size: 115%;
+	margin-left: 2%;
+	transform: scale(1, 1.25);
+	-webkit-transform: scale(1, 1.25); /* Safari and Chrome */
+	-moz-transform: scale(1, 1.25); /* Firefox */
+	-ms-transform: scale(1, 1.25); /* IE 9+ */
+	-o-transform: scale(1, 1.25); /* Opera */
+	font-weight: 600;
+}
+.signup, .signin {
+	float: left;
+}
+.signin {
+	padding: 2px 8px 1px;
+	margin-top: -2px;
+}
+.signin:hover {
+	margin-top: -2px;
+	border-bottom: solid 1px #FFF;
+	cursor: pointer;
+}
+.signup {
+	padding: 2px 12px;
+	margin-top: -4px;
+	margin-left: 10px;
+	font-weight: 700;
+	border: solid 1px #FFF;
+	border-radius: 8px;
+}
+.signup:hover {
+	background: #fff;
+	color: #444;
+	cursor: pointer;
+}
+.clear {
+	clear: both;
+}
+.root {
+	height: 100%;
+	position: relative;
+	padding: 0;
+	width: 100%;
+}
+.body {
+	padding: 0;
+	width: 100%;
+	/*height: 100vh;*/
+
+}
+.background {
+	min-height: 100vh;
+	padding-bottom: -70px;
+	width: 100%;
+	background: url("images/01.jpeg") no-repeat center center fixed;
+	background-size: cover;
+}
+footer {
+	color: #fff;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 70px;
+	border-top: solid 1px #000;
+	border-bottom: solid 1px #000;
+	background: #FFF;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5b5b5b+0,000000+100 */
+background: rgb(91,91,91); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(40,40,40,.75) 0%, rgba(0,0,0,.75) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(40,40,40,.75) 0%,rgba(0,0,0,.75) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(40,40,40,.75) 0%,rgba(0,0,0,.75) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5b5b5b', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+footer .copy {
+	font-family: 'Saira+Extra+Condensed', sans-serif;
+	font-size: 100%;
+	transform: scale(1, 1.25);
+	-webkit-transform: scale(1, 1.25); /* Safari and Chrome */
+	-moz-transform: scale(1, 1.25); /* Firefox */
+	-ms-transform: scale(1, 1.25); /* IE 9+ */
+	-o-transform: scale(1, 1.25); /* Opera */
+	margin-top: 20px;
+	margin-left: 10%;
+}
+.modal-body input {
+	margin-top: 5px;
+	margin-bottom: 15px;
+	margin-left: 20px;
+	width: 90%;
+}
+.modal-title {
+	margin-left: 20px;
+}
+.modal-footer button {
+	margin-right: 12%;
+}
+.modal {
+	margin-top: 15%;
+}
+.searchField input {
+	font-size: 16px;
+	padding-bottom: 4px;
+	margin-top: -8px;
+	padding-left: 5px;
+	width: 70%;
+	border: none;
+	outline: none;
+}
+.searchField {
+	padding-bottom: 5px;
+	padding-top: 5px;
+	background: #FFF;
+	width: 55%;
+	float: left;
+	margin-right: 18px;
+	box-shadow: 3px 3px 5px rgba(000,000,000,.75);
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+}
+.find {
+	margin-left: 18px;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.placeField input {
+	font-size: 16px;
+	padding-bottom: 4px;
+	margin-top: -8px;
+	padding-left: 5px;
+	width: 52%;
+	border: none;
+	outline: none;
+}
+.placeField {
+	padding-bottom: 5px;
+	padding-top: 5px;
+	background: #FFF;
+	width: 35%;
+	float: left;
+	box-shadow: 3px 3px 5px rgba(000,000,000,.75);
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+.near {
+	margin-left: 22px;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.searchCont {
+	margin: 15% auto;
+	width: 50%;
+	height: 43px;
+}
