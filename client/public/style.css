@@ -1,449 +1,419 @@
-html {
-	margin: 0;
-	padding: 0;
-	min-height: 100% !important;
-	width: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-repeat:no-repeat;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
 
-	}
-body {
-	padding: 0;
-	margin: 0;
-	min-height: 100%;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,dddddd+100 */
-	background: #ffffff; /* Old browsers */
-	background: -moz-linear-gradient(top, #ffffff 0%, #dddddd 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, #ffffff 0%,#dddddd 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, #ffffff 0%,#dddddd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
-}
-nav {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2b5d9b+0,1e5799+24,1e5799+24,207cca+63,207cca+63,7db9e8+100 */
-	background: #2b5d9b; /* Old browsers */
-	background: -moz-linear-gradient(top, #2b5d9b 0%, #1e5799 24%, #1e5799 24%, #207cca 63%, #207cca 63%, #7db9e8 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, #2b5d9b 0%,#1e5799 24%,#1e5799 24%,#207cca 63%,#207cca 63%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, #2b5d9b 0%,#1e5799 24%,#1e5799 24%,#207cca 63%,#207cca 63%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b5d9b', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
-	height: 100px;
-	width: 100%;
-	padding-left: 30px;
-	padding-right: 30px;
-	border-bottom: solid 1px #034;
-}
-footer {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2b5d9b+0,1e5799+24,1e5799+24,207cca+63,207cca+63,7db9e8+100 */
-	background: #2b5d9b; /* Old browsers */
-	background: -moz-linear-gradient(bottom, #2b5d9b 0%, #1e5799 24%, #1e5799 24%, #207cca 63%, #207cca 63%, #7db9e8 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(bottom, #2b5d9b 0%,#1e5799 24%,#1e5799 24%,#207cca 63%,#207cca 63%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to top, #2b5d9b 0%,#1e5799 24%,#1e5799 24%,#207cca 63%,#207cca 63%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b5d9b', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
-	height: 70px;
-	width: 100%;
-	padding-left: 30px;
-	padding-right: 30px;
-	border-bottom: solid 1px #034;
-	position: relative;
-}
-.Name {
-	font-family: 'Montserrat', sans-serif;
-	font-size: 48px;
-	color: #fff;
-	padding-top: 10px;
-}
-.root {
-  padding: 0 0 70px;
-  position: fixed;
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
 .mainContainer {
-	/*min-height: calc(100vh - 8.4vh);*/
-	position: relative;
-	height: 100%;
-	/*margin-bottom: -70px;*/
-}
-.mainContent {
-	width: 100%;
-}
-.mainNavigation {
-	float: right;
-	padding-top: 45px;
-	height: 100%;
-	/*background-color: #aaa;*/
-	margin-top: -90px;
-}
-.mainNavigation li {
-	margin-top: -32px;
-	float: left;
-	list-style: none;
-	font-family: 'Mukta', sans-serif;
-	color: #ddd;
-	font-size: 26px;
-	padding: 30px 20px 0px;
-	height: 98px;
-}
-.mainNavigation li:hover {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3b84d3+0,2777c6+24,6c99c9+63,7db9e8+100 */
-	background: #3b84d3; /* Old browsers */
-	background: -moz-linear-gradient(top, #3b84d3 0%, #2777c6 24%, #6c99c9 63%, #7db9e8 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, #3b84d3 0%,#2777c6 24%,#6c99c9 63%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, #3b84d3 0%,#2777c6 24%,#6c99c9 63%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b84d3', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
-	color: #fff;
-	padding-top: -20px;
-
-}
-.clear {
-	clear: both;
-}
-
-.logIn {
-	position: absolute;
-	background: #589fdb;
-	margin-top: -10px;
-	height: 30px;
-	width: 140px;
-	border-bottom-right-radius: 10px;
-	border-bottom-left-radius: 10px;
-	font-family: 'Mukta', sans-serif;
-	font-size: 20px;
-	font-weight: 600;
-	color: #fff;
-	box-shadow: 4px 2px 5px #444;
-	margin: 0px;
-}
-.logIn p {
-	margin-left: 40px;
-	margin-top: 0px;
-}
-.logIn:hover {
-	background: #7db9e8;
-	cursor: pointer;
-}
-.videoContainer {
-	max-width: 1200px;
-	margin: 0 auto;
-}
-.videoContainer video {
-	max-width: 1200px;
-	height: auto;
-}
-#video-controls {
-	max-width: 1200px;
-}
-#play-pause {
-	background: url("images/pause.png");
-	background-size: cover;
-	width: 37px;
-	height: 31px;
-	outline: none;
-	padding: 0px;
-	border: none;
-	float: left;
-	margin: 0px 10px 0px 50px;
-}
-#mute {
-	background: url("images/mute.png");
-	background-size: cover;
-	width: 31px;
-	height: 31px;
-	outline: none;
-	padding: 0px;
-	border: none;
-	float: left;
-	margin: 0 10px 0 25px;
-}
-#full-screen {
-	background: url("images/fullScreen.png");
-	background-size: cover;
-	width: 31px;
-	height: 31px;
-	outline: none;
-	padding: 0px;
-	border: none;
-	float: left;
-	margin: 0 10px 0 15px;
-}
-
-#seek-bar {
-	max-width: 650px;
-	float: left;
-	margin-top: 3px;
-}
-
-#volume-bar {
-	max-width: 200px;
-	float: left;
-	margin-top: 3px;
-}
-
-[type=range] {
-  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-  width: 100%; /* Specific width is required for Firefox. */
-  background: transparent; /* Otherwise white in Chrome */
-}
-
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-}
-
-input[type=range]:focus {
-  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
-}
-
-input[type=range]::-ms-track {
+  min-height: 100vh;
   width: 100%;
-  cursor: pointer;
-
-  /* Hides the slider so custom styles can be added */
-  background: transparent; 
-  border-color: transparent;
-  color: transparent;
+  background-image: url('images/background.jpeg');
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
 
-/* Special styling for WebKit/Blink */
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  border: 1px solid #fff;
-  height: 30px;
-  width: 10px;
-  border-radius: 3px;
-	background: #2b5d9b; /* Old browsers */
-	background: -webkit-linear-gradient(bottom, #2b5d9b 0%,#1e5799 24%,#1e5799 24%,#207cca 63%,#207cca 63%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
-  cursor: pointer;
-  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 6%;
 }
 
-/* All the same stuff for Firefox */
-input[type=range]::-moz-range-thumb {
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  border: 1px solid #fff;
-  height: 30px;
-  width: 10px;
-  border-radius: 3px;
-	background: #2b5d9b; /* Old browsers */
-	background: -moz-linear-gradient(bottom, #2b5d9b 0%, #1e5799 24%, #1e5799 24%, #207cca 63%, #207cca 63%, #7db9e8 100%); /* FF3.6-15 */
-  cursor: pointer;
+.navbar img {
+  width: 250px;
+  border-radius: 10px;
+  opacity: 1;
 }
 
-/* All the same stuff for IE */
-input[type=range]::-ms-thumb {
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  border: 1px solid #fff;
-  height: 30px;
-  width: 10px;
-  border-radius: 3px;
-	background: #2b5d9b; /* Old browsers */
-	background: linear-gradient(to top, #2b5d9b 0%,#1e5799 24%,#1e5799 24%,#207cca 63%,#207cca 63%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b5d9b', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
-  cursor: pointer;
+.navbar-links {
+  flex: 1;
+  text-align: right;
+  opacity: 0.8;
 }
 
-input[type=range]::-webkit-slider-runnable-track {
+.navbar-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.navbar-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navbar-links ul li::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.navbar-links ul li:hover::after {
   width: 100%;
-  height: 3px;
+}
+
+/*Landing Page*/
+.landing-inner {
+  color: #f03585;
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.landing-inner h1 {
+  font-size: 50px;
+}
+
+.landing-inner p {
+  margin: 10px 5px 40px;
+  font-size: 16px;
+  color: #f03585;
+  font-weight: 600;
+}
+
+.Link-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  border: 1px solid blue;
+  border-radius: 10px;
+  padding: 12px 34px;
+  font-size: 20px;
+  background: blue;
+  font-weight: 600px;
+  position: relative;
   cursor: pointer;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  background: #1a4568;
-  border-radius: 1.3px;
-  border: 0.2px solid #010101;
 }
 
-input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #367ebd;
+.Link-btn:hover {
+  border: 1px solid #f44336;
+  background: #f44336;
+  transition: 1s;
 }
 
-input[type=range]::-moz-range-track {
+.navbar-links .fas {
+  display: none;
+}
+
+.fa-bars {
+  display: none;
+}
+
+/*-----services sectuib----------- */
+.service {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+p {
+  color: #777;
+  font-size: 14px;
+  font-weight: 300px;
+  line-height: 22px;
+  padding: 10px;
+}
+
+.row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.service-col {
+  flex-basis: 31%;
+  background: #dfce9f;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.service-col:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.service-col .fas {
+  color: red;
+}
+
+.service-col ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 2px;
+  position: relative;
+  text-align: left;
+  transition: 0.5s;
+}
+
+.service-col ul li:hover {
+  font-weight: bold;
+}
+
+/*------------Location***************/
+.location {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.location-col {
+  flex-basis: 45%;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.location-col img {
   width: 100%;
-  height: 3px;
-  cursor: pointer;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  background: #1a4568;
-  border-radius: 1.3px;
-  border: 0.2px solid #010101;
+  display: block;
+  height: 400px;
 }
 
-input[type=range]::-ms-track {
-  width: 100%;
-  height: 3px;
-  cursor: pointer;
+.layer {
   background: transparent;
-  border-color: transparent;
-  border-width: 16px 0;
-  color: transparent;
-}
-input[type=range]::-ms-fill-lower {
-  background: #2a6495;
-  border: 0.2px solid #010101;
-  border-radius: 2.6px;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-}
-input[type=range]:focus::-ms-fill-lower {
-  background: #1a4568;
-}
-input[type=range]::-ms-fill-upper {
-  background: #1a4568;
-  border: 0.2px solid #010101;
-  border-radius: 2.6px;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-}
-input[type=range]:focus::-ms-fill-upper {
-  background: #367ebd;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
 }
 
-.mainText {
-	width: 80%;
-	margin: 18px auto;
-}
-.aboutIMG {
-	max-width: 100%;
-	margin: 0 auto 10px;
+.layer:hover {
+  background: rgba(226, 0, 0, 0.7);
 }
 
-.eventsForm input, .eventsForm textarea {
-	width: 100%;
-	margin-bottom: 10px;
-}
-.eventsForm label {
-	margin-bottom: -5px;
-}
-footer .left {
-	float: left;
-	margin: 16px 20px;
-	font-family: 'Mukta', sans-serif;
-	font-size: 17px;
-	font-weight: 300;
-	color: #fff;
-}
-footer .meetTeamLink {
-	float: right;
-	margin: 16px 20px;
-	font-family: 'Mukta', sans-serif;
-	font-size: 24px;
-	font-weight: 300;
-	color: #fff;
-}
-footer .meetTeamLink:hover {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3b84d3+0,2777c6+24,6c99c9+63,7db9e8+100 */
-	background: #3b84d3; /* Old browsers */
-	background: -moz-linear-gradient(bottom, #3b84d3 0%, #2777c6 24%, #6c99c9 63%, #7db9e8 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(bottom, #3b84d3 0%,#2777c6 24%,#6c99c9 63%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to top, #3b84d3 0%,#2777c6 24%,#6c99c9 63%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b84d3', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
-	color: #fff;
-	padding: 16px 20px 25px 40px;	
-	height: 70px;
-	margin-top: 0px;
-	margin-right: 0px;
-	cursor: pointer;
-}
-footer .meetTeam {
-	position: absolute;
-	right: 1.4%;
-	bottom: 70px;
-}
-.personContainer {
-	margin-bottom: -10px;
-}
-footer .personHeader {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+0,3784bf+29,207cca+72,7db9e8+100 */
-	background: #7db9e8; /* Old browsers */
-	background: -moz-linear-gradient(top, #7db9e8 0%, #3784bf 29%, #207cca 72%, #7db9e8 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, #7db9e8 0%,#3784bf 29%,#207cca 72%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, #7db9e8 0%,#3784bf 29%,#207cca 72%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
-	border-bottom: solid 1px #444;
-	border-top: solid 1px #444;
-	border-left: solid 1px #AAA;
-	border-right: solid 1px #AAA;
-}
-footer .personHeader:hover {
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+0,2d9fe5+29,2d9fe5+72,7db9e8+100 */
-background: #7db9e8; /* Old browsers */
-background: -moz-linear-gradient(top, #7db9e8 0%, #2d9fe5 29%, #2d9fe5 72%, #7db9e8 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, #7db9e8 0%,#2d9fe5 29%,#2d9fe5 72%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, #7db9e8 0%,#2d9fe5 29%,#2d9fe5 72%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
-	border-bottom: solid 1px #444;
-	border-top: solid 1px #444;
-	border-left: solid 1px #AAA;
-	border-right: solid 1px #AAA;
-	cursor: pointer;
-}
-.teamTitle {
-	height: 25px;
-	background: #a4d1f4;
-	border-top-right-radius: 10px:
-	border-top-left-radius: 10px: 
-}
-.teamTitle:hover {
-	background: #c6e0f4;
-	cursor: pointer;
-}
-.teamTitle button {
-	margin-right: 10px;
-	margin-top: 3px;
-}
-.personHeader img {
-	margin: 5px 10px 5px 22px;
-}
-.personHeader .personTitle {
-	color: #fff;
-	font-family: 'Mukta', sans-serif;
-	font-size: 18px;
-	font-weight: 300;
-	margin-right: 22px;
-}
-.personBody {
-	padding-top: 10px;
-	padding-bottom: 6px;
-	background: rgba(255,255,255, .8);
-	border-left: solid 1px #AAA;
-	border-right: solid 1px #AAA;
-}
-#loginModal {
-	position: fixed;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
-	background: rgba(000,000,000, .5);
-	z-index: 1;
+.layer h3 {
+  width: 100%;
+  font-weight: 500;
+  color: #fff;
+  font-size: 26px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  transition: 0.5s;
+  opacity: 0;
 }
 
-#signInLink {
-	margin-left: 450px;
+.layer:hover h3 {
+  bottom: 49%;
+  opacity: 1;
 }
 
-#loginModal .close {
-	padding-left: : 300px;
+/*------------Experience-------------*/
+.experience {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  margin-top: 50px;
 }
 
-.modal-header .close {
-    padding-left: 550px;
+.experience-col {
+  flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 5px;
+  text-align: left;
 }
 
-#loginSubmit {
-	margin-bottom: 10px;
+.experience-col img {
+  width: 100%;
+  border-radius: 10px;
+  height: 250px;
 }
-.eventsContainer {
-	width: 90%;
-	margin-left: 5%;
+
+.experience-col h3 {
+  margin-top: 16px;
+  margin-bottom: 15px;
+  text-align: center;
 }
-.panel-heading {
-	background: #236cba;
-	text-align: center;
-	color: #fff;
-	font-size: 18px;
+
+.experience-col ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 2px;
+  position: relative;
+  text-align: left;
+  transition: 0.5s;
 }
-.panel-heading i {
-	margin-right: 1.5%;
+
+.experience-col:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.experience-col .fas {
+  color: red;
+}
+
+.experience-col ul li:hover {
+  font-weight: bold;
+}
+
+/*--------Contact Section------------*/
+.contactus {
+  margin: 50px auto;
+  width: 80%;
+  background-image: url(images/background2.jpeg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+  padding: 50px 0;
+  height: 80px;
+}
+
+.contactus h1 {
+  color: blue;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+/*----------Footer------------*/
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.footer h4 {
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.icons .fab {
+  color: #f44336;
+  margin: 0 13px;
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+@media (max-width: 700px) {
+  .landing-inner h1 {
+    font-size: 20px;
+  }
+  .navbar-links ul li {
+    display: block;
+  }
+  .navbar-links {
+    position: absolute;
+    background: #f44336;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: 0px;
+    text-align: left;
+    z-index: 2;
+  }
+  .navbar-links .fas {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .navbar-links ul {
+    padding: 30px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+  .contactus h1 {
+    font-size: 24px;
+  }
+}
+
+/*Landing Page*/
+.page-inner {
+  color: #d43509;
+  width: 90%;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.page-inner h1 {
+  font-size: 50px;
+}
+
+.page-inner p {
+  margin: 10px 5px 40px;
+  font-size: 16px;
+  color: #f03585;
+  font-weight: 600;
+}
+
+.page-inner input,
+.page-inner textarea {
+  width: 50%;
+  padding: 15px;
+  margin-bottom: 20px;
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  height: 70px;
+}
+
+.page-inner .Link-btn {
+  width: 20%;
+}
+
+/*** Alert **/
+.alert {
+  padding: 0.8rem;
+  margin: 1rem 0;
+  opacity: 0.9;
+  background: #f4f4f4;
+  color: #333;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 90%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.alert-primary {
+  background: #17a2b8;
+  color: #fff;
+}
+
+.alert-success {
+  background: #28a745;
+  color: #fff;
+}
+
+.alert-danger {
+  background: #dc3545;
+  color: #fff;
 }

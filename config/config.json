@@ -1,23 +1,38 @@
 {
   "development": {
     "username": "webhost",
-    "password": "class1",
-    "database": "reserved_db",
+    "password": "class1#489",
+    "database": "test_db",
     "host": "localhost",
+    "port": "3306",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
+    "username": "webhost",
+    "password": "class1",
+    "database": "reserved_db",
+    "host": "localhost",
+    "port": "3306",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "wwg54pasaww1lyrp",
+    "password": "phjyspdde6vc1eyj",
+    "database": "ljohyy6tmf9als6c",
+    "host": "s465z7sj4pwhp7fn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "port": "3306",
     "dialect": "mysql"
+  },
+  "keys": {
+    "jwtToken": "mySecretToken"
+  },
+  "emailFrom": "info@itreserved.com",
+  "smtpOptions": {
+    "host": "smtp.ethereal.email",
+    "port": 587,
+    "auth": {
+      "user": "elvera.muller26@ethereal.email",
+      "pass": "7FfaQFKCzUxtCvU7yF"
+    }
   }
 }

@@ -1,36 +1,48 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const morgan = require('morgan');
-const mongoose = require("mongoose");
 const routes = require("./routes");
+const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3001;
-const passport = require('passport');
 const db = require("./models");
+const errorHandler = require('./middleware/errorHandler');
 
 // Configure body parser for AJAX requests
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-  
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+// app.use(cookieParser());
+
+// allow cors requests from any origin and with credentials
+app.use(
+  cors({
+    origin: (origin, callback) => callback(null, true),
+    credentials: true,
+  })
+);
+
 // Log requests to console
 app.use(morgan('dev'));  
-
-// pass the passport middleware
-app.use(passport.initialize());
-
-// Bring in defined Passport Strategy
-require('./config/passport')(passport);  
 
 // Serve up static assets
 app.use(express.static("client/build/"));
 app.use(express['static'](__dirname+'client/public', {maxAge: 86400000}));
+
 // Add routes, both API and view
 app.use(routes);
 
+// swagger docs route
+//app.use('/api-docs', require('_helpers/swagger'));
 
-db.sequelize.sync({ force: true }).then(function() {
-	// require('./db/seed.js')(db);
-	app.listen(PORT, function() {
+// global error handler
+app.use(errorHandler);
+
+// db.sequelize.sync({ force: true }).then(function() {
+// 	require('./scripts/seed.js')(db);
+// 	app.listen(PORT, function() {
+// 	  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+// 	});
+// });
+
+app.listen(PORT, function() {
 	  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
-	});
-});
+	})

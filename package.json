@@ -1,64 +1,37 @@
 {
-  "name": "mern",
+  "name": "mernboiler",
   "version": "1.0.0",
   "description": "* Must use ReactJS or Angular in some way (even if minimal)",
   "main": "server.js",
   "scripts": {
-    "server": "node server.js",
+    "server": "nodemon server.js",
     "client": "cd client && npm run start",
-    "start": "concurrently \"./node_modules/.bin/nodemon\" \"npm run client\"",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
     "build": "cd client && npm run build",
     "deploy": "npm run build && git add . && git commit -m \"Building for production\" && git push heroku master",
     "seed": "node scripts/seedDB",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "engines": {
-    "yarn": "1.1.0",
-    "node": "6.11.2",
-    "npm": "3.10.10"
-  },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "concurrently": "^3.5.0",
-    "nodemon": "^1.12.1",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-router": "^4.2.0",
-    "webpack": "^3.7.1"
-  },
   "dependencies": {
-    "aws-sdk": "^2.134.0",
-    "axios": "^0.16.2",
-    "bcrypt": "^1.0.3",
-    "body-parser": "^1.17.2",
-    "bufferutil": "3.0.2",
-    "express": "^4.16.2",
-    "jquery": "^3.2.1",
-    "jsonwebtoken": "^8.1.0",
-    "mkdirp": "^0.5.1",
-    "moment": "^2.18.1",
-    "mongoose": "^4.11.7",
-    "morgan": "^1.9.0",
-    "multer": "^1.3.0",
-    "nodemon": "^1.12.1",
-    "passport": "^0.4.0",
-    "passport-jwt": "^3.0.0",
-    "react": "^16.0.0",
-    "react-bootstrap": "^0.31.3",
-    "react-dom": "^16.0.0",
-    "react-router-dom": "^4.1.2"
+    "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.6",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "joi": "^17.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.2.5",
+    "nodemailer": "^6.6.2",
+    "request": "^2.88.2",
+    "sequelize": "^6.6.2"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/davesrose/MS_support.git"
-  },
-  "bugs": {
-    "url": "https://github.com/davesrose/MS_support/issues"
-  },
-  "homepage": "https://github.com/davesrose/MS_support#readme"
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "nodemon": "^2.0.7"
+  }
 }

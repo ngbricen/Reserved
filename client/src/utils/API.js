@@ -1,52 +1,33 @@
-import axios from "axios";
+import axios from 'axios';
+// import store from '../store';
+// import { LOGOUT } from '../actions/types';
 
-//defining API calls that will be handled by express
-
-export default {
-  register: function(userData) {
-  	return axios.post("/api/auth/register", userData);
+const api = axios.create({
+  baseURL: '/api/',
+  headers: {
+    'Content-Type': 'application/json',
   },
-  authenticate: function(userData) {
-  	return axios.post("/api/auth/authenticate", userData);
-  },
-  uploadImage: function(formData) {
-  	return axios.post("/api/file/upload", formData);
-  },
-  getUser: function(id) {
-    return axios.get("/api/users/" + id);
-  },
-  // Update a profile in the database
-  updateProfile: function(id, profileData) {
-    return axios.put("/api/users/" + id, profileData);
-  },
-  // Verify the current token
-  memberInfo: function(token) {
-    return axios.get("/api/auth/" + token);
-  },
-  logout: function(){
-    return axios.get("api/auth/logout");
-  },
-  
-  addEvent: function(eventData) {
-    return axios.post("/api/events/", eventData);
-  },
-
-  // Gets all events
-  getEvents: function() {
-    return axios.get("/api/events");
-  },
-
-  // Deletes the Event with the given id
-  deleteEvent: function(id) {
-    return axios.delete("/api/userEvents/" + id);
-  },
-
-  getSavedEvents: function(id) {
-    return axios.get("/api/userEvents/" + id);
-  },
-
-  // Saves an article to the database
-  saveEvent: function(eventData) {
-    return axios.post("/api/userEvents", eventData);
+  proxy: {
+    host: 'localhost',
+    port: 3001
   }
-};
+});
+/**
+ intercept any error responses from the api
+ and check if the token is no longer valid.
+ ie. Token has expired or user is no longer
+ authenticated.
+ logout the user if the token has expired
+**/
+
+api.interceptors.response.use(
+  (res) => res,
+  (err) => {
+    // if (err.response.status === 401) {
+    //   store.dispatch({ type: LOGOUT });
+    // }
+    return Promise.reject(err);
+  }
+);
+
+export default api;
